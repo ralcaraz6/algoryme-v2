@@ -70,31 +70,24 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 .hero .sub{font-size:17.5px;max-width:56ch}
 .hero-ctas{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
 
-/* CARTA DE SERVICIOS · tarjetas verticales */
-.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none}
-.menu-card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--card);
+/* CARTA DE SERVICIOS · rejilla por resultado */
+.menu{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;list-style:none}
+.menu>li{flex:0 1 calc((100% - 36px)/3);display:flex;min-width:280px}
+.menu-card{position:relative;display:flex;flex-direction:column;width:100%;background:var(--card);
   border:1px solid var(--line);border-radius:18px;padding:28px 26px 24px;text-decoration:none;color:inherit;
   transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease}
 .menu-card:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:var(--shadow)}
 .menu-card:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.menu-top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.menu-ico-box{width:58px;height:58px;border-radius:16px;background:var(--paper);border:1px solid var(--line);
-  display:grid;place-items:center;flex:none;box-shadow:0 1px 2px rgba(33,29,24,.05)}
-.menu-ico{width:36px;height:36px}
-.badge{display:inline-block;font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
-  color:#fff;background:var(--sienna);padding:6px 10px;border-radius:999px}
-.menu-card h3{font-size:1.24rem;letter-spacing:-.018em;line-height:1.25;margin-bottom:12px}
-.menu-card .desc{color:var(--muted);font-size:14.5px;line-height:1.55}
-.menu-chips{list-style:none;display:grid;gap:7px;margin:16px 0 0;padding:0}
-.menu-chips li{position:relative;padding-left:18px;font-size:13px;color:var(--ink)}
-.menu-chips li::before{content:"";position:absolute;left:0;top:5px;width:9px;height:5px;
-  border-left:2px solid var(--sienna);border-bottom:2px solid var(--sienna);transform:rotate(-45deg)}
-.menu-more{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
-  font:600 13.5px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:7px}
+.menu-ico-box{width:56px;height:56px;border-radius:16px;background:var(--paper);border:1px solid var(--line);
+  display:grid;place-items:center;flex:none;margin-bottom:18px;box-shadow:0 1px 2px rgba(33,29,24,.05)}
+.menu-ico{width:34px;height:34px}
+.menu-card h3{font-size:1.2rem;letter-spacing:-.018em;line-height:1.28;margin-bottom:11px}
+.menu-card .desc{color:var(--muted);font-size:14.5px;line-height:1.55;flex:1}
+.menu-more{margin-top:20px;font:600 13.5px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:7px}
 .menu-card:hover .menu-more .arrow{transform:translateX(3px)}
 .arrow{transition:transform .16s ease;display:inline-block}
-@media (max-width:980px){.menu{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.menu{grid-template-columns:1fr;gap:16px}.menu-card{padding:24px 22px 20px}}
+@media (max-width:980px){.menu>li{flex:0 1 calc((100% - 18px)/2)}}
+@media (max-width:640px){.menu>li{flex:1 1 100%;min-width:0}.menu-card{padding:24px 22px 20px}}
 
 /* proceso */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;list-style:none;counter-reset:s}
@@ -183,110 +176,75 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 <section class="hero">
   <div class="container">
     <h1>Construimos el software que <em style="font-style:italic;color:var(--sienna)">hace crecer tu negocio</em></h1>
-    <p class="sub">Elige por dónde empezar. Cada servicio se despliega en tu infraestructura y el código es tuyo.</p>
+    <p class="sub">Cada sistema se despliega en tu infraestructura y el código es tuyo.</p>
   </div>
 </section>
 
-<section class="section" id="servicios" style="padding-top:0">
+<section class="section" id="servicios" style="padding-top:24px">
   <div class="container">
+    <div class="sec-head">
+      <p class="kicker">Servicios</p>
+      <h2>Qué podemos construir para ti</h2>
+      <p class="sub">Siete formas de quitarle a tu equipo el trabajo que no debería ser manual. Elige por dónde empezar.</p>
+    </div>
     <ul class="menu">
       <li><a class="menu-card" href="aplicaciones-y-webs.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 25h48"/>
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 25h48"/>
 <circle cx="15" cy="19.5" r="1.4" fill="#7C7264" stroke="none"/><circle cx="20.5" cy="19.5" r="1.4" fill="#7C7264" stroke="none"/>
 <path d="M22 33l-5 5 5 5" stroke="#B5401C"/><path d="M33 33l5 5-5 5" stroke="#B5401C"/><path d="M46 32v14" stroke="#B5401C" stroke-dasharray="3 3"/></svg></span>
-          <span class="badge">Lo más pedido</span>
-        </div>
         <h3>Aplicaciones y webs a medida</h3>
-        <p class="desc">Construimos la herramienta que tu negocio necesita y que ningún producto de catálogo te da: una web, una tienda online, un portal para tus clientes o la aplicación con la que trabaja tu equipo cada día. También añadimos funcionalidad nueva a lo que ya tienes funcionando.</p>
-        <ul class="menu-chips">
-          <li>Webs y tiendas online</li>
-          <li>Portales y paneles internos</li>
-          <li>Funcionalidad nueva</li>
-        </ul>
+        <p class="desc">La herramienta que tu negocio necesita y que ningún producto de catálogo te da: una web, una tienda online, un portal para tus clientes o la aplicación con la que trabaja tu equipo cada día. También añadimos funcionalidad a lo que ya tienes.</p>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
-      <li><a class="menu-card" href="auditoria-de-ia.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="27" cy="27" r="15"/><path d="M38 38l12 12" stroke="#B5401C" stroke-width="3"/>
+      <li><a class="menu-card" href="auditoria-adopcion-ia.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="27" cy="27" r="15"/><path d="M38 38l12 12" stroke="#B5401C" stroke-width="3"/>
 <path d="M21 32h13" stroke="#7C7264"/><path d="M21 26.5l3 3 6-7" stroke="#B5401C"/><path d="M27 21h7" stroke="#7C7264"/></svg></span>
-          <span class="badge">Empieza aquí</span>
-        </div>
-        <h3>Auditoría de IA</h3>
-        <p class="desc">Miramos cómo trabaja tu empresa por dentro y te decimos dónde la IA y la automatización te van a dar dinero, y dónde no merecen la pena. Sales con una lista de oportunidades ordenada por impacto, con el coste y el plazo de cada una.</p>
-        <ul class="menu-chips">
-          <li>Entrevistas con tu equipo</li>
-          <li>Lista priorizada</li>
-          <li>Coste y plazo de cada idea</li>
-        </ul>
-        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
-      </a></li>
-      <li><a class="menu-card" href="agentes-de-ia.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="20" width="28" height="24" rx="6"/><path d="M32 20v-7" stroke="#7C7264"/><circle cx="32" cy="10" r="3" stroke="#7C7264"/>
-<circle cx="26" cy="30" r="2.4" fill="#B5401C" stroke="none"/><circle cx="38" cy="30" r="2.4" fill="#B5401C" stroke="none"/>
-<path d="M27 37h10" stroke="#7C7264"/>
-<path d="M18 30H9M55 30h-9" stroke="#B5401C"/><path d="M12 26l-3 4 3 4M52 26l3 4-3 4" stroke="#B5401C"/></svg></span>
-          
-        </div>
-        <h3>Agentes de IA</h3>
-        <p class="desc">Un agente es un sistema al que le das un objetivo y lo ejecuta solo: busca la información, la cruza, escribe en tus herramientas y te avisa cuando hace falta una decisión humana. Sustituye a esas tareas encadenadas que hoy hace una persona saltando entre programas.</p>
-        <ul class="menu-chips">
-          <li>Trabaja en tus herramientas</li>
-          <li>Permisos acotados</li>
-          <li>Traza de cada paso</li>
-        </ul>
-        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
-      </a></li>
-      <li><a class="menu-card" href="respuesta-automatica.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h30a5 5 0 0 1 5 5v13a5 5 0 0 1-5 5H20l-9 7v-7a5 5 0 0 1-3-5V19a5 5 0 0 1 3-5z"/>
-<path d="M15 22h16M15 29h11" stroke="#7C7264"/>
-<path d="M40 46l4-4h9a4 4 0 0 0 4-4v-9a4 4 0 0 0-4-4h-6" stroke="#B5401C"/>
-<path d="M47 33h4M47 38h6" stroke="#B5401C"/></svg></span>
-          
-        </div>
-        <h3>Respuesta automática</h3>
-        <p class="desc">Contesta sola los correos y mensajes que se repiten, usando la documentación de tu empresa y tu tono. Sabe quién escribe porque está conectada a tu CRM, y lo que necesita a una persona lo pasa a una persona. Funciona a cualquier hora, también cuando no hay nadie.</p>
-        <ul class="menu-chips">
-          <li>Email, WhatsApp y web</li>
-          <li>Conectada a tu CRM</li>
-          <li>Escala a una persona</li>
-        </ul>
-        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
-      </a></li>
-      <li><a class="menu-card" href="informes-automaticos.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="8" width="34" height="44" rx="4"/><path d="M20 19h18M20 26h13" stroke="#7C7264"/>
-<path d="M20 42l6-7 5 4 8-11" stroke="#B5401C" stroke-width="2.4"/>
-<circle cx="49" cy="45" r="10" fill="#FAF7F0"/><path d="M49 40v5l3.5 2" stroke="#B5401C"/></svg></span>
-          
-        </div>
-        <h3>Informes automáticos</h3>
-        <p class="desc">El informe que alguien rehace a mano cada lunes se genera y se envía solo: con tus datos, a la hora que tú digas y en el formato de siempre. Y si algo se sale de lo normal, te avisa, para que no tengas que estar mirando un panel por si acaso.</p>
-        <ul class="menu-chips">
-          <li>Diario o semanal</li>
-          <li>Con tus fuentes de datos</li>
-          <li>Alertas cuando algo cambia</li>
-        </ul>
+        <h3>Auditoría de adopción de IA</h3>
+        <p class="desc">Miramos cómo trabaja tu empresa por dentro y te decimos dónde la IA te va a dar dinero y dónde no merece la pena. Sales con una lista de oportunidades ordenada por impacto, con el coste y el plazo de cada una.</p>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
       <li><a class="menu-card" href="automatizacion-de-procesos.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="19" height="15" rx="4"/><rect x="39" y="37" width="19" height="15" rx="4"/>
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="19" height="15" rx="4"/><rect x="39" y="37" width="19" height="15" rx="4"/>
 <path d="M25 19.5h5a7 7 0 0 1 7 7v11" stroke="#B5401C" stroke-width="2.4"/>
 <path d="M33 33l4 4.5 4-4.5" stroke="#B5401C" stroke-width="2.4"/>
-<path d="M11 18h9M11 22h6" stroke="#7C7264"/><path d="M44 43h9M44 47h6" stroke="#7C7264"/>
-<path d="M14 40l3.5 3.5L24 37" stroke="#B5401C"/></svg></span>
-          
-        </div>
+<path d="M11 18h9M11 22h6" stroke="#7C7264"/><path d="M44 43h9M44 47h6" stroke="#7C7264"/></svg></span>
         <h3>Automatización de procesos</h3>
-        <p class="desc">El trabajo administrativo que hoy se hace copiando, pegando y revisando: pedidos, facturas que entran, altas de cliente, control de stock. Lo dejamos funcionando entre tus sistemas, con reglas que validan por el camino y avisan cuando algo no cuadra.</p>
-        <ul class="menu-chips">
-          <li>Entre tus sistemas actuales</li>
-          <li>Validación por reglas</li>
-          <li>Aviso si algo no cuadra</li>
-        </ul>
+        <p class="desc">El trabajo administrativo que hoy se hace copiando, pegando y revisando: pedidos, facturas que entran, altas de cliente, control de stock. Lo dejamos funcionando entre tus sistemas, con reglas que validan por el camino.</p>
+        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a></li>
+      <li><a class="menu-card" href="informes-automaticos.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="8" width="34" height="44" rx="4"/><path d="M20 19h18M20 26h13" stroke="#7C7264"/>
+<path d="M20 42l6-7 5 4 8-11" stroke="#B5401C" stroke-width="2.4"/>
+<circle cx="49" cy="45" r="10" fill="#FAF7F0"/><path d="M49 40v5l3.5 2" stroke="#B5401C"/></svg></span>
+        <h3>Informes automáticos</h3>
+        <p class="desc">El informe que alguien rehace a mano cada lunes se genera y se envía solo: con tus datos, a la hora que tú digas y en el formato de siempre. Y si algo se sale de lo normal, te avisa sin que tengas que mirar un panel.</p>
+        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a></li>
+      <li><a class="menu-card" href="atencion-al-cliente.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h30a5 5 0 0 1 5 5v13a5 5 0 0 1-5 5H20l-9 7v-7a5 5 0 0 1-3-5V19a5 5 0 0 1 3-5z"/>
+<path d="M15 22h16M15 29h11" stroke="#7C7264"/>
+<path d="M40 36v-4a8 8 0 0 1 16 0v4" stroke="#B5401C"/><rect x="38" y="36" width="5" height="9" rx="2.5" stroke="#B5401C"/>
+<rect x="53" y="36" width="5" height="9" rx="2.5" stroke="#B5401C"/><path d="M55.5 45v1.5a3.5 3.5 0 0 1-3.5 3.5h-4" stroke="#B5401C"/></svg></span>
+        <h3>Atención al cliente automatizada</h3>
+        <p class="desc">Contesta sola los correos y mensajes que se repiten, con la documentación de tu empresa y tu tono. Sabe quién escribe porque está conectada a tu CRM, y lo que necesita a una persona lo pasa a una persona. A cualquier hora.</p>
+        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a></li>
+      <li><a class="menu-card" href="chatbots-documentacion-interna.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h20l10 10v20a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"/><path d="M34 8v10h10"/>
+<path d="M18 24h14M18 31h9" stroke="#7C7264"/>
+<rect x="34" y="36" width="22" height="16" rx="5" fill="#FAF7F0" stroke="#B5401C"/>
+<circle cx="41" cy="44" r="1.8" fill="#B5401C" stroke="none"/><circle cx="45" cy="44" r="1.8" fill="#B5401C" stroke="none"/><circle cx="49" cy="44" r="1.8" fill="#B5401C" stroke="none"/></svg></span>
+        <h3>Chatbots con documentación interna</h3>
+        <p class="desc">Un asistente que responde con los manuales, contratos, protocolos y presupuestos de tu empresa. Tu equipo pregunta en lenguaje normal y recibe la respuesta con la fuente citada, en vez de rebuscar entre carpetas y PDF.</p>
+        <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a></li>
+      <li><a class="menu-card" href="dashboards-inteligencia-negocio.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="12" width="48" height="38" rx="5"/><path d="M8 22h48" stroke="#7C7264"/>
+<path d="M17 42V31M27 42V27M37 42V34" stroke="#B5401C" stroke-width="3"/>
+<path d="M17 27l10-6 10 4 9-8" stroke="#B5401C" stroke-width="2.2" opacity=".55"/>
+<circle cx="46" cy="38" r="5" stroke="#B5401C"/><path d="M46 38v-5" stroke="#B5401C"/></svg></span>
+        <h3>Dashboards e inteligencia de negocio</h3>
+        <p class="desc">Los números de tu negocio en un sitio y actualizados solos: ventas, márgenes, clientes, stock. Unificamos los datos que hoy viven repartidos en cinco herramientas para que decidas mirando, no intuyendo.</p>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
     </ul>

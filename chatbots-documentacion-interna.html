@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agentes de IA · Algoryme</title>
-<meta name="description" content="Un agente es un sistema al que le das un objetivo y lo ejecuta solo: busca la información, la cruza, escribe en tus herramientas y te avisa cuando hac">
+<title>Chatbots con documentación interna · Algoryme</title>
+<meta name="description" content="Un asistente que responde con los manuales, contratos, protocolos y presupuestos de tu empresa. Tu equipo pregunta en lenguaje normal y recibe la resp">
 <meta name="robots" content="noindex,nofollow">
-<link rel="canonical" href="https://ralcaraz6.github.io/algoryme-v2/agentes-de-ia.html">
+<link rel="canonical" href="https://ralcaraz6.github.io/algoryme-v2/chatbots-documentacion-interna.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%20width%3D%2732%27%20height%3D%2732%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%23211D18%27%2F%3E%3Cpath%20d%3D%27M9%2021.5%20L16%2010.8%20L23%2021.5%27%20fill%3D%27none%27%20stroke%3D%27%23FEFCF8%27%20stroke-width%3D%274.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,31 +70,24 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 .hero .sub{font-size:17.5px;max-width:56ch}
 .hero-ctas{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
 
-/* CARTA DE SERVICIOS · tarjetas verticales */
-.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none}
-.menu-card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--card);
+/* CARTA DE SERVICIOS · rejilla por resultado */
+.menu{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;list-style:none}
+.menu>li{flex:0 1 calc((100% - 36px)/3);display:flex;min-width:280px}
+.menu-card{position:relative;display:flex;flex-direction:column;width:100%;background:var(--card);
   border:1px solid var(--line);border-radius:18px;padding:28px 26px 24px;text-decoration:none;color:inherit;
   transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease}
 .menu-card:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:var(--shadow)}
 .menu-card:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.menu-top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.menu-ico-box{width:58px;height:58px;border-radius:16px;background:var(--paper);border:1px solid var(--line);
-  display:grid;place-items:center;flex:none;box-shadow:0 1px 2px rgba(33,29,24,.05)}
-.menu-ico{width:36px;height:36px}
-.badge{display:inline-block;font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
-  color:#fff;background:var(--sienna);padding:6px 10px;border-radius:999px}
-.menu-card h3{font-size:1.24rem;letter-spacing:-.018em;line-height:1.25;margin-bottom:12px}
-.menu-card .desc{color:var(--muted);font-size:14.5px;line-height:1.55}
-.menu-chips{list-style:none;display:grid;gap:7px;margin:16px 0 0;padding:0}
-.menu-chips li{position:relative;padding-left:18px;font-size:13px;color:var(--ink)}
-.menu-chips li::before{content:"";position:absolute;left:0;top:5px;width:9px;height:5px;
-  border-left:2px solid var(--sienna);border-bottom:2px solid var(--sienna);transform:rotate(-45deg)}
-.menu-more{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
-  font:600 13.5px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:7px}
+.menu-ico-box{width:56px;height:56px;border-radius:16px;background:var(--paper);border:1px solid var(--line);
+  display:grid;place-items:center;flex:none;margin-bottom:18px;box-shadow:0 1px 2px rgba(33,29,24,.05)}
+.menu-ico{width:34px;height:34px}
+.menu-card h3{font-size:1.2rem;letter-spacing:-.018em;line-height:1.28;margin-bottom:11px}
+.menu-card .desc{color:var(--muted);font-size:14.5px;line-height:1.55;flex:1}
+.menu-more{margin-top:20px;font:600 13.5px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:7px}
 .menu-card:hover .menu-more .arrow{transform:translateX(3px)}
 .arrow{transition:transform .16s ease;display:inline-block}
-@media (max-width:980px){.menu{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.menu{grid-template-columns:1fr;gap:16px}.menu-card{padding:24px 22px 20px}}
+@media (max-width:980px){.menu>li{flex:0 1 calc((100% - 18px)/2)}}
+@media (max-width:640px){.menu>li{flex:1 1 100%;min-width:0}.menu-card{padding:24px 22px 20px}}
 
 /* proceso */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;list-style:none;counter-reset:s}
@@ -181,13 +174,13 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 <main id="main">
 <section class="page-hero">
   <div class="container">
-    <p class="crumbs"><a href="index.html">Servicios</a><span aria-hidden="true">/</span><span aria-current="page">Agentes de IA</span></p>
-    <svg class="svc-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="20" width="28" height="24" rx="6"/><path d="M32 20v-7" stroke="#7C7264"/><circle cx="32" cy="10" r="3" stroke="#7C7264"/>
-<circle cx="26" cy="30" r="2.4" fill="#B5401C" stroke="none"/><circle cx="38" cy="30" r="2.4" fill="#B5401C" stroke="none"/>
-<path d="M27 37h10" stroke="#7C7264"/>
-<path d="M18 30H9M55 30h-9" stroke="#B5401C"/><path d="M12 26l-3 4 3 4M52 26l3 4-3 4" stroke="#B5401C"/></svg>
-    <h1>Agentes de IA</h1>
-    <p class="sub">Un agente es un sistema al que le das un objetivo y lo ejecuta solo: busca la información, la cruza, escribe en tus herramientas y te avisa cuando hace falta una decisión humana. Sustituye a esas tareas encadenadas que hoy hace una persona saltando entre programas.</p>
+    <p class="crumbs"><a href="index.html">Servicios</a><span aria-hidden="true">/</span><span aria-current="page">Chatbots con documentación interna</span></p>
+    <svg class="svc-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h20l10 10v20a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"/><path d="M34 8v10h10"/>
+<path d="M18 24h14M18 31h9" stroke="#7C7264"/>
+<rect x="34" y="36" width="22" height="16" rx="5" fill="#FAF7F0" stroke="#B5401C"/>
+<circle cx="41" cy="44" r="1.8" fill="#B5401C" stroke="none"/><circle cx="45" cy="44" r="1.8" fill="#B5401C" stroke="none"/><circle cx="49" cy="44" r="1.8" fill="#B5401C" stroke="none"/></svg>
+    <h1>Chatbots con documentación interna</h1>
+    <p class="sub">Un asistente que responde con los manuales, contratos, protocolos y presupuestos de tu empresa. Tu equipo pregunta en lenguaje normal y recibe la respuesta con la fuente citada, en vez de rebuscar entre carpetas y PDF.</p>
     <div class="hero-ctas"><a class="btn btn-primary btn-lg" href="#contacto">Hablemos de tu caso <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
   </div>
 </section>
@@ -195,14 +188,8 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 <section class="section">
   <div class="container">
     <div class="two">
-      <div class="box now">
-        <p class="t">Cómo suele estar hoy</p>
-        <p>Hay trabajo que no es una sola tarea, sino una cadena: mirar un pedido, comprobar el stock, actualizar el CRM, avisar al cliente y anotarlo en la hoja. Lo hace una persona a mano, tarda, y si se despista se rompe la cadena entera.</p>
-      </div>
-      <div class="box sol">
-        <p class="t">Qué hacemos</p>
-        <p>Construimos un agente que recibe el objetivo y ejecuta la cadena completa contra tus sistemas reales, con permisos acotados a lo que debe tocar. Cuando algo se sale de lo previsto, para y avisa en vez de improvisar. Cada paso queda registrado y es auditable.</p>
-      </div>
+      <div class="box now"><p class="t">Cómo suele estar hoy</p><p>El conocimiento de la empresa está repartido entre carpetas, correos y PDF que solo saben encontrar dos personas. Cuando esas dos no están, el resto pregunta, espera o improvisa.</p></div>
+      <div class="box sol"><p class="t">Qué hacemos</p><p>Un asistente que ha leído toda tu documentación y responde en lenguaje normal, citando de qué documento sale cada respuesta para que se pueda comprobar. Vive en tu infraestructura: tus documentos no salen de casa.</p></div>
     </div>
   </div>
 </section>
@@ -211,69 +198,42 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
   <div class="container">
     <div class="sec-head" style="margin-bottom:32px"><h2>Qué incluye</h2></div>
     <ul class="inc">
-      <li>Conectado a tu CRM, ERP, correo o base de datos</li>
-      <li>Permisos acotados a lo que debe tocar</li>
-      <li>Validación humana en las acciones sensibles</li>
-      <li>Registro completo de cada paso que da</li>
-      <li>Avisa cuando no está seguro, no improvisa</li>
-      <li>Ejecutándose en tu propia infraestructura</li>
+      <li>Manuales, protocolos, contratos y presupuestos</li>
+      <li>Responde citando el documento de origen</li>
+      <li>Búsqueda en lenguaje normal, sin palabras clave</li>
+      <li>Respeta los permisos de cada persona</li>
+      <li>Se actualiza cuando cambia la documentación</li>
+      <li>Alojado en tu propia infraestructura</li>
     </ul>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="sec-head">
-      <p class="kicker">Otros servicios</p>
-      <h2>Quizá también te encaja</h2>
-    </div>
+    <div class="sec-head"><p class="kicker">Otros servicios</p><h2>Quizá también te encaja</h2></div>
     <ul class="menu">
       <li><a class="menu-card" href="aplicaciones-y-webs.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 25h48"/>
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 25h48"/>
 <circle cx="15" cy="19.5" r="1.4" fill="#7C7264" stroke="none"/><circle cx="20.5" cy="19.5" r="1.4" fill="#7C7264" stroke="none"/>
 <path d="M22 33l-5 5 5 5" stroke="#B5401C"/><path d="M33 33l5 5-5 5" stroke="#B5401C"/><path d="M46 32v14" stroke="#B5401C" stroke-dasharray="3 3"/></svg></span>
-          <span class="badge">Lo más pedido</span>
-        </div>
         <h3>Aplicaciones y webs a medida</h3>
-        <p class="desc">Construimos la herramienta que tu negocio necesita y que ningún producto de catálogo te da: una web, una tienda online, un portal para tus clientes o la aplicación con la que trabaja tu equipo cada día. También añadimos funcionalidad nueva a lo que ya tienes funcionando.</p>
-        <ul class="menu-chips">
-          <li>Webs y tiendas online</li>
-          <li>Portales y paneles internos</li>
-          <li>Funcionalidad nueva</li>
-        </ul>
+        <p class="desc">La herramienta que tu negocio necesita y que ningún producto de catálogo te da: una web, una tienda online, un portal para tus clientes o la aplicación con la que trabaja tu equipo cada día. También añadimos funcionalidad a lo que ya tienes.</p>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
-      <li><a class="menu-card" href="auditoria-de-ia.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="27" cy="27" r="15"/><path d="M38 38l12 12" stroke="#B5401C" stroke-width="3"/>
+      <li><a class="menu-card" href="auditoria-adopcion-ia.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="27" cy="27" r="15"/><path d="M38 38l12 12" stroke="#B5401C" stroke-width="3"/>
 <path d="M21 32h13" stroke="#7C7264"/><path d="M21 26.5l3 3 6-7" stroke="#B5401C"/><path d="M27 21h7" stroke="#7C7264"/></svg></span>
-          <span class="badge">Empieza aquí</span>
-        </div>
-        <h3>Auditoría de IA</h3>
-        <p class="desc">Miramos cómo trabaja tu empresa por dentro y te decimos dónde la IA y la automatización te van a dar dinero, y dónde no merecen la pena. Sales con una lista de oportunidades ordenada por impacto, con el coste y el plazo de cada una.</p>
-        <ul class="menu-chips">
-          <li>Entrevistas con tu equipo</li>
-          <li>Lista priorizada</li>
-          <li>Coste y plazo de cada idea</li>
-        </ul>
+        <h3>Auditoría de adopción de IA</h3>
+        <p class="desc">Miramos cómo trabaja tu empresa por dentro y te decimos dónde la IA te va a dar dinero y dónde no merece la pena. Sales con una lista de oportunidades ordenada por impacto, con el coste y el plazo de cada una.</p>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
-      <li><a class="menu-card" href="respuesta-automatica.html">
-        <div class="menu-top">
-          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h30a5 5 0 0 1 5 5v13a5 5 0 0 1-5 5H20l-9 7v-7a5 5 0 0 1-3-5V19a5 5 0 0 1 3-5z"/>
-<path d="M15 22h16M15 29h11" stroke="#7C7264"/>
-<path d="M40 46l4-4h9a4 4 0 0 0 4-4v-9a4 4 0 0 0-4-4h-6" stroke="#B5401C"/>
-<path d="M47 33h4M47 38h6" stroke="#B5401C"/></svg></span>
-          
-        </div>
-        <h3>Respuesta automática</h3>
-        <p class="desc">Contesta sola los correos y mensajes que se repiten, usando la documentación de tu empresa y tu tono. Sabe quién escribe porque está conectada a tu CRM, y lo que necesita a una persona lo pasa a una persona. Funciona a cualquier hora, también cuando no hay nadie.</p>
-        <ul class="menu-chips">
-          <li>Email, WhatsApp y web</li>
-          <li>Conectada a tu CRM</li>
-          <li>Escala a una persona</li>
-        </ul>
+      <li><a class="menu-card" href="automatizacion-de-procesos.html">
+        <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="19" height="15" rx="4"/><rect x="39" y="37" width="19" height="15" rx="4"/>
+<path d="M25 19.5h5a7 7 0 0 1 7 7v11" stroke="#B5401C" stroke-width="2.4"/>
+<path d="M33 33l4 4.5 4-4.5" stroke="#B5401C" stroke-width="2.4"/>
+<path d="M11 18h9M11 22h6" stroke="#7C7264"/><path d="M44 43h9M44 47h6" stroke="#7C7264"/></svg></span>
+        <h3>Automatización de procesos</h3>
+        <p class="desc">El trabajo administrativo que hoy se hace copiando, pegando y revisando: pedidos, facturas que entran, altas de cliente, control de stock. Lo dejamos funcionando entre tus sistemas, con reglas que validan por el camino.</p>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
     </ul>
@@ -284,11 +244,11 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
     <div class="sec-head">
       <p class="kicker">Contacto</p>
       <h2>Hablemos de tu caso</h2>
-      <p class="sub">Nos interesa tu caso de <strong>agentes de ia</strong>. Cuéntanos por dónde va.</p>
+      <p class="sub">Nos interesa tu caso de <strong>chatbots con documentación interna</strong>. Cuéntanos por dónde va.</p>
     </div>
     <div class="contact-grid">
       <form id="cForm" novalidate>
-        <input type="hidden" name="servicio" value="Agentes de IA">
+        <input type="hidden" name="servicio" value="Chatbots con documentación interna">
         <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <div class="field"><label for="c-name">Nombre y apellidos</label><input id="c-name" name="name_" type="text" autocomplete="name" required></div>
         <div class="field"><label for="c-email">Email de trabajo</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
@@ -299,7 +259,7 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
         <p class="consent">Al enviar aceptas nuestra <a href="https://algoryme.com/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</p>
       </form>
       <ul class="ways">
-        <li class="way"><p class="l">WhatsApp</p><p class="v"><a href="https://wa.me/34605621826?text=Hola%2C%20escribo%20por%20Agentes%20de%20IA" target="_blank" rel="noopener">+34 605 62 18 26</a></p><p class="n">Solemos responder el mismo día.</p></li>
+        <li class="way"><p class="l">WhatsApp</p><p class="v"><a href="https://wa.me/34605621826?text=Hola%2C%20escribo%20por%20Chatbots%20con%20documentación%20interna" target="_blank" rel="noopener">+34 605 62 18 26</a></p><p class="n">Solemos responder el mismo día.</p></li>
         <li class="way"><p class="l">Email</p><p class="v"><a href="mailto:info@algoryme.com">info@algoryme.com</a></p><p class="n">Respondemos en menos de 24 horas.</p></li>
         <li class="way"><p class="l">Llamada</p><p class="v">30 minutos, sin compromiso</p><p class="n">Escríbenos y te proponemos hueco.</p></li>
       </ul>

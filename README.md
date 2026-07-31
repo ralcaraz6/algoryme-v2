@@ -11,17 +11,18 @@ Los servicios como carta de restaurante: se ven los seis de un vistazo, en tarje
 con su ilustración, una explicación de verdad (no una frase suelta) y tres puntos concretos.
 Cada uno con su propia landing. Home = servicios + proceso + equipo + contacto.
 
-Los seis, en el orden que ve el visitante:
+Los siete, en el orden que ve el visitante:
 
-1. **Aplicaciones y webs a medida** — lo que más se pide ahora mismo
-2. **Auditoría de IA** — la puerta de entrada
-3. **Agentes de IA**
-4. **Respuesta automática**
-5. **Informes automáticos**
-6. **Automatización de procesos**
+1. **Aplicaciones y webs a medida**
+2. **Auditoría de adopción de IA**
+3. **Automatización de procesos**
+4. **Informes automáticos**
+5. **Atención al cliente automatizada**
+6. **Chatbots con documentación interna**
+7. **Dashboards e inteligencia de negocio**
 
-«Documentos y facturas» y «Datos entre sistemas» se retiraron: nadie entendía qué se vendía en
-cada una y en la práctica eran el mismo trabajo. Ahora viven dentro de «Automatización de procesos».
+Nombres elegidos por el cliente. Las tarjetas van sin viñetas y bajo un encabezado de sección
+(«Servicios · Qué podemos construir para ti»), porque sin él no se entendía qué eran las tarjetas.
 
 ## Detalle importante
 
