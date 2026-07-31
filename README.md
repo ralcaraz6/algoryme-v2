@@ -7,8 +7,21 @@ Versión minimalista de algoryme.com, para comparar enfoques. **No sustituye a l
 
 ## Idea
 
-Los servicios como carta de restaurante: se ven los seis de un vistazo, cada uno con su
-ilustración, y cada uno con su propia landing. Home = servicios + proceso + equipo + contacto.
+Los servicios como carta de restaurante: se ven los seis de un vistazo, en tarjetas verticales
+con su ilustración, una explicación de verdad (no una frase suelta) y tres puntos concretos.
+Cada uno con su propia landing. Home = servicios + proceso + equipo + contacto.
+
+Los seis, en el orden que ve el visitante:
+
+1. **Aplicaciones y webs a medida** — lo que más se pide ahora mismo
+2. **Auditoría de IA** — la puerta de entrada
+3. **Agentes de IA**
+4. **Respuesta automática**
+5. **Informes automáticos**
+6. **Automatización de procesos**
+
+«Documentos y facturas» y «Datos entre sistemas» se retiraron: nadie entendía qué se vendía en
+cada una y en la práctica eran el mismo trabajo. Ahora viven dentro de «Automatización de procesos».
 
 ## Detalle importante
 

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Auditoría de procesos · Algoryme</title>
-<meta name="description" content="Sabes que se pierde tiempo en algo, pero no por dónde empezar.">
+<title>Automatización de procesos · Algoryme</title>
+<meta name="description" content="El trabajo administrativo que hoy se hace copiando, pegando y revisando: pedidos, facturas que entran, altas de cliente, control de stock. Lo dejamos ">
 <meta name="robots" content="noindex,nofollow">
-<link rel="canonical" href="https://ralcaraz6.github.io/algoryme-v2/auditoria-de-procesos.html">
+<link rel="canonical" href="https://ralcaraz6.github.io/algoryme-v2/automatizacion-de-procesos.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%20width%3D%2732%27%20height%3D%2732%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%23211D18%27%2F%3E%3Cpath%20d%3D%27M9%2021.5%20L16%2010.8%20L23%2021.5%27%20fill%3D%27none%27%20stroke%3D%27%23FEFCF8%27%20stroke-width%3D%274.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,21 +70,31 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 .hero .sub{font-size:17.5px;max-width:56ch}
 .hero-ctas{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
 
-/* CARTA DE SERVICIOS */
-.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none}
-.menu-card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
-  border-radius:var(--radius-card);padding:26px 24px 22px;text-decoration:none;color:inherit;
+/* CARTA DE SERVICIOS · tarjetas verticales */
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none}
+.menu-card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--card);
+  border:1px solid var(--line);border-radius:18px;padding:28px 26px 24px;text-decoration:none;color:inherit;
   transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease}
 .menu-card:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:var(--shadow)}
 .menu-card:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.menu-ico{width:64px;height:64px;margin-bottom:18px}
-.menu-card h3{font-size:1.18rem;letter-spacing:-.015em;margin-bottom:8px}
-.menu-card p{color:var(--muted);font-size:14.5px;line-height:1.5;flex:1}
-.menu-more{margin-top:18px;font:600 13px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:7px}
+.menu-top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.menu-ico-box{width:58px;height:58px;border-radius:16px;background:var(--paper);border:1px solid var(--line);
+  display:grid;place-items:center;flex:none;box-shadow:0 1px 2px rgba(33,29,24,.05)}
+.menu-ico{width:36px;height:36px}
+.badge{display:inline-block;font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
+  color:#fff;background:var(--sienna);padding:6px 10px;border-radius:999px}
+.menu-card h3{font-size:1.24rem;letter-spacing:-.018em;line-height:1.25;margin-bottom:12px}
+.menu-card .desc{color:var(--muted);font-size:14.5px;line-height:1.55}
+.menu-chips{list-style:none;display:grid;gap:7px;margin:16px 0 0;padding:0}
+.menu-chips li{position:relative;padding-left:18px;font-size:13px;color:var(--ink)}
+.menu-chips li::before{content:"";position:absolute;left:0;top:5px;width:9px;height:5px;
+  border-left:2px solid var(--sienna);border-bottom:2px solid var(--sienna);transform:rotate(-45deg)}
+.menu-more{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
+  font:600 13.5px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:7px}
 .menu-card:hover .menu-more .arrow{transform:translateX(3px)}
 .arrow{transition:transform .16s ease;display:inline-block}
-@media (max-width:900px){.menu{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:600px){.menu{grid-template-columns:1fr;gap:14px}.menu-card{padding:22px 20px 20px}.menu-ico{width:52px;height:52px;margin-bottom:14px}}
+@media (max-width:980px){.menu{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.menu{grid-template-columns:1fr;gap:16px}.menu-card{padding:24px 22px 20px}}
 
 /* proceso */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;list-style:none;counter-reset:s}
@@ -169,15 +179,16 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
   </div>
 </header>
 <main id="main">
-
 <section class="page-hero">
   <div class="container">
-    <p class="crumbs"><a href="index.html">Servicios</a><span aria-hidden="true">/</span><span aria-current="page">Auditoría de procesos</span></p>
-    <svg class="svc-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="27" cy="27" r="15"/><path d="M38 38l12 12" stroke="#B5401C" stroke-width="3"/>
-<path d="M20 27h5M29 22h5" stroke="#7C7264"/><path d="M20 33h14" stroke="#7C7264"/>
-<path d="M22 21l3 3 5-6" stroke="#B5401C"/></svg>
-    <h1>Auditoría de procesos</h1>
-    <p class="sub">Sabes que se pierde tiempo en algo, pero no por dónde empezar.</p>
+    <p class="crumbs"><a href="index.html">Servicios</a><span aria-hidden="true">/</span><span aria-current="page">Automatización de procesos</span></p>
+    <svg class="svc-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="19" height="15" rx="4"/><rect x="39" y="37" width="19" height="15" rx="4"/>
+<path d="M25 19.5h5a7 7 0 0 1 7 7v11" stroke="#B5401C" stroke-width="2.4"/>
+<path d="M33 33l4 4.5 4-4.5" stroke="#B5401C" stroke-width="2.4"/>
+<path d="M11 18h9M11 22h6" stroke="#7C7264"/><path d="M44 43h9M44 47h6" stroke="#7C7264"/>
+<path d="M14 40l3.5 3.5L24 37" stroke="#B5401C"/></svg>
+    <h1>Automatización de procesos</h1>
+    <p class="sub">El trabajo administrativo que hoy se hace copiando, pegando y revisando: pedidos, facturas que entran, altas de cliente, control de stock. Lo dejamos funcionando entre tus sistemas, con reglas que validan por el camino y avisan cuando algo no cuadra.</p>
     <div class="hero-ctas"><a class="btn btn-primary btn-lg" href="#contacto">Hablemos de tu caso <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
   </div>
 </section>
@@ -187,11 +198,11 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
     <div class="two">
       <div class="box now">
         <p class="t">Cómo suele estar hoy</p>
-        <p>Ves que el equipo dedica horas a trabajo que no debería ser manual, pero nadie tiene el mapa completo de dónde se va el tiempo ni de qué merece la pena atacar primero.</p>
+        <p>El CRM no habla con el ERP, y la hoja de cálculo tampoco. Alguien hace de puente copiando datos de un sitio a otro, revisando facturas una a una y tecleando pedidos. Es lento, es caro y es justo donde se cuelan los errores que luego cuesta encontrar.</p>
       </div>
       <div class="box sol">
-        <p class="t">Qué construimos</p>
-        <p>Nos sentamos con dirección y con quien hace el trabajo cada día. Salimos con una lista de oportunidades priorizada por impacto y esfuerzo, y con qué costaría cada una. Si no vemos retorno claro, te lo decimos antes de que gastes.</p>
+        <p class="t">Qué hacemos</p>
+        <p>Automatizamos el proceso de punta a punta: la información entra, se lee, se valida contra tus reglas de negocio y acaba donde tiene que estar, sin que nadie la teclee. Cuando algo no cuadra, el sistema para y avisa en vez de arrastrar el error.</p>
       </div>
     </div>
   </div>
@@ -199,14 +210,14 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 
 <section class="section band" style="padding:64px 0">
   <div class="container">
-    <div class="sec-head" style="margin-bottom:32px">
-      <h2>Qué incluye</h2>
-    </div>
+    <div class="sec-head" style="margin-bottom:32px"><h2>Qué incluye</h2></div>
     <ul class="inc">
-      <li>Entrevistas con dirección y con los equipos</li>
-      <li>Mapa de los procesos que hoy se hacen a mano</li>
-      <li>Lista priorizada: qué primero, qué después, qué no tocar</li>
-      <li>Alcance y plazo estimado de cada oportunidad</li>
+      <li>Pedidos, albaranes y facturas que entran</li>
+      <li>Datos que viajan entre CRM, ERP y hojas de cálculo</li>
+      <li>Extracción de los campos que te importan</li>
+      <li>Validación con tus reglas de negocio</li>
+      <li>Aviso cuando algo no cuadra</li>
+      <li>Tú revisas solo la excepción</li>
     </ul>
   </div>
 </section>
@@ -219,44 +230,66 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
     </div>
     <ul class="menu">
       <li><a class="menu-card" href="aplicaciones-y-webs.html">
-        <svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 25h48"/>
+        <div class="menu-top">
+          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="5"/><path d="M8 25h48"/>
 <circle cx="15" cy="19.5" r="1.4" fill="#7C7264" stroke="none"/><circle cx="20.5" cy="19.5" r="1.4" fill="#7C7264" stroke="none"/>
-<path d="M20 34l-5 5 5 5" stroke="#B5401C"/><path d="M31 34l5 5-5 5" stroke="#B5401C"/><path d="M44 33v12" stroke="#B5401C" stroke-dasharray="3 3"/></svg>
-        <h3>Aplicaciones y webs</h3>
-        <p>La herramienta o la web que tu negocio necesita, hecha a medida.</p>
+<path d="M22 33l-5 5 5 5" stroke="#B5401C"/><path d="M33 33l5 5-5 5" stroke="#B5401C"/><path d="M46 32v14" stroke="#B5401C" stroke-dasharray="3 3"/></svg></span>
+          <span class="badge">Lo más pedido</span>
+        </div>
+        <h3>Aplicaciones y webs a medida</h3>
+        <p class="desc">Construimos la herramienta que tu negocio necesita y que ningún producto de catálogo te da: una web, una tienda online, un portal para tus clientes o la aplicación con la que trabaja tu equipo cada día. También añadimos funcionalidad nueva a lo que ya tienes funcionando.</p>
+        <ul class="menu-chips">
+          <li>Webs y tiendas online</li>
+          <li>Portales y paneles internos</li>
+          <li>Funcionalidad nueva</li>
+        </ul>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
-      <li><a class="menu-card" href="informes-automaticos.html">
-        <svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="8" width="34" height="44" rx="4"/><path d="M20 20h18M20 27h13" stroke="#7C7264"/>
-<path d="M20 42l6-7 5 4 8-11" stroke="#B5401C" stroke-width="2.4"/>
-<circle cx="48" cy="46" r="10" fill="#FAF7F0"/><path d="M48 41v5l3 2" stroke="#B5401C"/></svg>
-        <h3>Informes automáticos</h3>
-        <p>El informe del lunes, generado y enviado solo.</p>
+      <li><a class="menu-card" href="auditoria-de-ia.html">
+        <div class="menu-top">
+          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="27" cy="27" r="15"/><path d="M38 38l12 12" stroke="#B5401C" stroke-width="3"/>
+<path d="M21 32h13" stroke="#7C7264"/><path d="M21 26.5l3 3 6-7" stroke="#B5401C"/><path d="M27 21h7" stroke="#7C7264"/></svg></span>
+          <span class="badge">Empieza aquí</span>
+        </div>
+        <h3>Auditoría de IA</h3>
+        <p class="desc">Miramos cómo trabaja tu empresa por dentro y te decimos dónde la IA y la automatización te van a dar dinero, y dónde no merecen la pena. Sales con una lista de oportunidades ordenada por impacto, con el coste y el plazo de cada una.</p>
+        <ul class="menu-chips">
+          <li>Entrevistas con tu equipo</li>
+          <li>Lista priorizada</li>
+          <li>Coste y plazo de cada idea</li>
+        </ul>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
-      <li><a class="menu-card" href="atencion-y-respuestas.html">
-        <svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h30a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H20l-9 7v-7a5 5 0 0 1-3-5V19a5 5 0 0 1 3-5z"/>
-<path d="M15 22h16M15 29h11" stroke="#7C7264"/>
-<path d="M40 36v-4a8 8 0 0 1 16 0v4" stroke="#B5401C"/><rect x="38" y="36" width="5" height="9" rx="2.5" stroke="#B5401C"/>
-<rect x="53" y="36" width="5" height="9" rx="2.5" stroke="#B5401C"/><path d="M55.5 45v1.5a3.5 3.5 0 0 1-3.5 3.5h-4" stroke="#B5401C"/></svg>
-        <h3>Atención y respuestas</h3>
-        <p>Responde a tus clientes con tus manuales y tu tono, a cualquier hora.</p>
+      <li><a class="menu-card" href="agentes-de-ia.html">
+        <div class="menu-top">
+          <span class="menu-ico-box"><svg class="menu-ico" viewBox="0 0 64 64" fill="none" stroke="#211D18" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="20" width="28" height="24" rx="6"/><path d="M32 20v-7" stroke="#7C7264"/><circle cx="32" cy="10" r="3" stroke="#7C7264"/>
+<circle cx="26" cy="30" r="2.4" fill="#B5401C" stroke="none"/><circle cx="38" cy="30" r="2.4" fill="#B5401C" stroke="none"/>
+<path d="M27 37h10" stroke="#7C7264"/>
+<path d="M18 30H9M55 30h-9" stroke="#B5401C"/><path d="M12 26l-3 4 3 4M52 26l3 4-3 4" stroke="#B5401C"/></svg></span>
+          
+        </div>
+        <h3>Agentes de IA</h3>
+        <p class="desc">Un agente es un sistema al que le das un objetivo y lo ejecuta solo: busca la información, la cruza, escribe en tus herramientas y te avisa cuando hace falta una decisión humana. Sustituye a esas tareas encadenadas que hoy hace una persona saltando entre programas.</p>
+        <ul class="menu-chips">
+          <li>Trabaja en tus herramientas</li>
+          <li>Permisos acotados</li>
+          <li>Traza de cada paso</li>
+        </ul>
         <span class="menu-more">Leer más <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a></li>
     </ul>
   </div>
 </section>
-
 <section class="section band" id="contacto">
   <div class="container">
     <div class="sec-head">
       <p class="kicker">Contacto</p>
       <h2>Hablemos de tu caso</h2>
-      <p class="sub">Nos interesa tu caso de <strong>auditoría de procesos</strong>. Cuéntanos por dónde va.</p>
+      <p class="sub">Nos interesa tu caso de <strong>automatización de procesos</strong>. Cuéntanos por dónde va.</p>
     </div>
     <div class="contact-grid">
       <form id="cForm" novalidate>
-        <input type="hidden" name="servicio" value="Auditoría de procesos">
+        <input type="hidden" name="servicio" value="Automatización de procesos">
         <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <div class="field"><label for="c-name">Nombre y apellidos</label><input id="c-name" name="name_" type="text" autocomplete="name" required></div>
         <div class="field"><label for="c-email">Email de trabajo</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
@@ -267,7 +300,7 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
         <p class="consent">Al enviar aceptas nuestra <a href="https://algoryme.com/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</p>
       </form>
       <ul class="ways">
-        <li class="way"><p class="l">WhatsApp</p><p class="v"><a href="https://wa.me/34605621826?text=Hola%2C%20escribo%20por%20Auditoría de procesos" target="_blank" rel="noopener">+34 605 62 18 26</a></p><p class="n">Solemos responder el mismo día.</p></li>
+        <li class="way"><p class="l">WhatsApp</p><p class="v"><a href="https://wa.me/34605621826?text=Hola%2C%20escribo%20por%20Automatización%20de%20procesos" target="_blank" rel="noopener">+34 605 62 18 26</a></p><p class="n">Solemos responder el mismo día.</p></li>
         <li class="way"><p class="l">Email</p><p class="v"><a href="mailto:info@algoryme.com">info@algoryme.com</a></p><p class="n">Respondemos en menos de 24 horas.</p></li>
         <li class="way"><p class="l">Llamada</p><p class="v">30 minutos, sin compromiso</p><p class="n">Escríbenos y te proponemos hueco.</p></li>
       </ul>
