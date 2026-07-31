@@ -121,7 +121,7 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 /* equipo */
 .team{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;list-style:none}
 .team li{text-align:center}
-.team img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:10px;border:1px solid var(--line)}
+.team img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:10px;border:1px solid var(--line)}
 .team .n{font-size:14px;font-weight:600;letter-spacing:-.01em}
 .team .r{font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 @media (max-width:860px){.team{grid-template-columns:repeat(3,1fr);gap:20px}}
@@ -176,6 +176,53 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 .foot-links{display:flex;gap:18px}
 .foot-links a{font:500 11.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 .foot-links a:hover{color:var(--ink)}
+
+/* CASOS · previews de web */
+.webs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none}
+.web-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  text-decoration:none;color:inherit;transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease}
+.web-card:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:var(--shadow)}
+.web-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--cream);border-bottom:1px solid var(--line)}
+.web-bar i{width:7px;height:7px;border-radius:50%;background:var(--line-strong);flex:none}
+.web-bar code{margin-left:8px;font:500 11px/1 var(--mono);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.web-shot{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:top center;display:block;background:var(--paper)}
+.web-txt{padding:18px 20px 20px}
+.web-txt p{font-size:14px;color:var(--muted);line-height:1.5}
+.web-txt .go{margin-top:12px;font:600 13px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:6px}
+@media (max-width:880px){.webs{grid-template-columns:1fr;gap:16px}}
+
+/* CASO en la landing de servicio */
+.caso{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 30px;max-width:880px;margin:0 auto}
+.caso .who{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sienna);margin-bottom:18px}
+.caso-grid{display:grid;gap:20px}
+.caso-b .t{font:600 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.caso-b p{font-size:15.5px;line-height:1.55}
+.caso-b.res{border-top:1px solid var(--line);padding-top:20px}
+.caso-b.res p{font-weight:600}
+@media (min-width:760px){.caso-grid{grid-template-columns:1fr 1fr}.caso-b.res{grid-column:1/-1}}
+
+/* EQUIPO */
+.lead-person{display:grid;grid-template-columns:210px 1fr;gap:34px;align-items:center;max-width:900px;margin:0 auto 46px}
+.lead-person img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+.lead-person .role{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sienna);margin-bottom:10px}
+.lead-person h3{font-size:1.5rem;letter-spacing:-.025em;margin-bottom:12px}
+.lead-person p{color:var(--muted);font-size:15.5px;line-height:1.6}
+.li-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font:600 13px/1 var(--sans);
+  color:var(--ink);text-decoration:none;border:1px solid var(--line-strong);border-radius:999px;padding:9px 14px;
+  transition:border-color .16s,background .16s}
+.li-link:hover{border-color:var(--ink);background:var(--card)}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;list-style:none;max-width:900px;margin:0 auto}
+.team li{text-align:center}
+.team img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:10px;border:1px solid var(--line)}
+.team .n{font-size:14px;font-weight:600;letter-spacing:-.01em}
+.team .r{font:500 10.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.team .li{display:inline-flex;margin-top:8px;color:var(--muted);transition:color .15s}
+.team .li:hover{color:var(--sienna)}
+@media (max-width:860px){
+  .lead-person{grid-template-columns:1fr;gap:20px;text-align:center;justify-items:center}
+  .lead-person img{max-width:200px}
+  .team{grid-template-columns:repeat(3,1fr);gap:20px}
+}
 </style>
 </head>
 <body>
@@ -213,6 +260,22 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
   </div>
 </section>
 
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:28px">
+      <p class="kicker">Un caso real</p>
+      <h2>Un fondo de inversión</h2>
+    </div>
+    <div class="caso">
+      <div class="caso-grid">
+        <div class="caso-b"><p class="t">El problema</p><p>Preparar el resumen diario ocupaba la primera hora de alguien del equipo: mirar posiciones, cruzar datos y escribir el correo. Y dependía de que esa persona estuviera disponible.</p></div>
+        <div class="caso-b"><p class="t">Qué construimos</p><p>Cada mañana a las 7:00, los socios reciben un correo con las posiciones de sus participadas, su valor y las oportunidades del día. Se genera solo de madrugada, con las reglas propias del fondo.</p></div>
+        <div class="caso-b res"><p class="t">Qué cambió</p><p>El briefing llega todos los días a la misma hora y esa primera hora del equipo vuelve a ser suya. En producción desde entonces, sin mantenimiento diario.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section band" style="padding:64px 0">
   <div class="container">
     <div class="sec-head" style="margin-bottom:32px"><h2>Qué incluye</h2></div>

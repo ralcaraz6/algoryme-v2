@@ -74,7 +74,7 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 .fam{margin-bottom:38px}
 .fam:last-child{margin-bottom:0}
 .fam-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.fam-h h3{font-size:1.15rem;letter-spacing:-.015em}
+.fam-h h3{font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
 .fam-h span{font:500 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .fam-g{display:grid;grid-template-columns:1fr 1fr;gap:18px;list-style:none}
 .svc-card{display:flex;flex-direction:column;height:100%;background:var(--card);border:1px solid var(--line);
@@ -121,7 +121,7 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 /* equipo */
 .team{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;list-style:none}
 .team li{text-align:center}
-.team img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:10px;border:1px solid var(--line)}
+.team img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:10px;border:1px solid var(--line)}
 .team .n{font-size:14px;font-weight:600;letter-spacing:-.01em}
 .team .r{font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 @media (max-width:860px){.team{grid-template-columns:repeat(3,1fr);gap:20px}}
@@ -176,6 +176,53 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
 .foot-links{display:flex;gap:18px}
 .foot-links a{font:500 11.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 .foot-links a:hover{color:var(--ink)}
+
+/* CASOS · previews de web */
+.webs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none}
+.web-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  text-decoration:none;color:inherit;transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease}
+.web-card:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:var(--shadow)}
+.web-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--cream);border-bottom:1px solid var(--line)}
+.web-bar i{width:7px;height:7px;border-radius:50%;background:var(--line-strong);flex:none}
+.web-bar code{margin-left:8px;font:500 11px/1 var(--mono);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.web-shot{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:top center;display:block;background:var(--paper)}
+.web-txt{padding:18px 20px 20px}
+.web-txt p{font-size:14px;color:var(--muted);line-height:1.5}
+.web-txt .go{margin-top:12px;font:600 13px/1 var(--sans);color:var(--sienna);display:inline-flex;align-items:center;gap:6px}
+@media (max-width:880px){.webs{grid-template-columns:1fr;gap:16px}}
+
+/* CASO en la landing de servicio */
+.caso{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 30px;max-width:880px;margin:0 auto}
+.caso .who{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sienna);margin-bottom:18px}
+.caso-grid{display:grid;gap:20px}
+.caso-b .t{font:600 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.caso-b p{font-size:15.5px;line-height:1.55}
+.caso-b.res{border-top:1px solid var(--line);padding-top:20px}
+.caso-b.res p{font-weight:600}
+@media (min-width:760px){.caso-grid{grid-template-columns:1fr 1fr}.caso-b.res{grid-column:1/-1}}
+
+/* EQUIPO */
+.lead-person{display:grid;grid-template-columns:210px 1fr;gap:34px;align-items:center;max-width:900px;margin:0 auto 46px}
+.lead-person img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+.lead-person .role{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sienna);margin-bottom:10px}
+.lead-person h3{font-size:1.5rem;letter-spacing:-.025em;margin-bottom:12px}
+.lead-person p{color:var(--muted);font-size:15.5px;line-height:1.6}
+.li-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font:600 13px/1 var(--sans);
+  color:var(--ink);text-decoration:none;border:1px solid var(--line-strong);border-radius:999px;padding:9px 14px;
+  transition:border-color .16s,background .16s}
+.li-link:hover{border-color:var(--ink);background:var(--card)}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;list-style:none;max-width:900px;margin:0 auto}
+.team li{text-align:center}
+.team img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:10px;border:1px solid var(--line)}
+.team .n{font-size:14px;font-weight:600;letter-spacing:-.01em}
+.team .r{font:500 10.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.team .li{display:inline-flex;margin-top:8px;color:var(--muted);transition:color .15s}
+.team .li:hover{color:var(--sienna)}
+@media (max-width:860px){
+  .lead-person{grid-template-columns:1fr;gap:20px;text-align:center;justify-items:center}
+  .lead-person img{max-width:200px}
+  .team{grid-template-columns:repeat(3,1fr);gap:20px}
+}
 </style>
 </head>
 <body>
@@ -185,6 +232,7 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
     <a class="logo" href="index.html" aria-label="Algoryme"><span class="lw-a">ALGORYME</span><span class="lw-cur" aria-hidden="true"></span></a>
     <nav class="nav-links" aria-label="Principal">
       <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#casos">Casos</a>
       <a href="index.html#proceso">Cómo trabajamos</a>
       <a href="index.html#equipo">Equipo</a>
     </nav>
@@ -264,6 +312,34 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
   </div>
 </section>
 
+<section class="section band" id="casos">
+  <div class="container">
+    <div class="sec-head">
+      <p class="kicker">Casos</p>
+      <h2>Algunas cosas que hemos construido</h2>
+      <p class="sub">Tres plataformas que están funcionando ahora mismo. Puedes entrar y verlas.</p>
+    </div>
+    <ul class="webs">
+      <li><a class="web-card" href="https://prospectalo.com/" target="_blank" rel="noopener">
+        <span class="web-bar"><i></i><i></i><i></i><code>prospectalo.com</code></span>
+        <img class="web-shot" src="casos/prospectalo.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Vista de prospectalo.com">
+        <span class="web-txt"><p>Pipeline de ventas para autónomos: cada oportunidad con su próximo paso.</p><span class="go">Verla en marcha <span class="arrow" aria-hidden="true">&rarr;</span></span></span>
+      </a></li>
+      <li><a class="web-card" href="https://app.svinvesting.com" target="_blank" rel="noopener">
+        <span class="web-bar"><i></i><i></i><i></i><code>app.svinvesting.com</code></span>
+        <img class="web-shot" src="casos/svinvesting.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Vista de app.svinvesting.com">
+        <span class="web-txt"><p>Plataforma de análisis de renta variable con valoración de 60.000 empresas.</p><span class="go">Verla en marcha <span class="arrow" aria-hidden="true">&rarr;</span></span></span>
+      </a></li>
+      <li><a class="web-card" href="https://www.orph.eus/" target="_blank" rel="noopener">
+        <span class="web-bar"><i></i><i></i><i></i><code>orph.eus</code></span>
+        <img class="web-shot" src="casos/orpheus.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Vista de orph.eus">
+        <span class="web-txt"><p>Plataforma de gestión de espacios de trabajo para oficinas.</p><span class="go">Verla en marcha <span class="arrow" aria-hidden="true">&rarr;</span></span></span>
+      </a></li>
+    </ul>
+  </div>
+</section>
+
+
 <section class="section band" id="proceso">
   <div class="container">
     <div class="sec-head">
@@ -301,30 +377,40 @@ h3{font-size:1.06rem;line-height:1.35;font-weight:600;letter-spacing:-.008em}
       <h2>Quién construye tus sistemas</h2>
       <p class="sub">Hablas directamente con quien diseña y mantiene lo que se pone en producción.</p>
     </div>
+    <div class="lead-person">
+      <img src="equipo/rogelio-alcaraz.jpg" width="420" height="420" loading="lazy" decoding="async" alt="Rogelio Alcaraz">
+      <div>
+        <p class="role">Director</p>
+        <h3>Rogelio Alcaraz</h3>
+        <p>Llevo más de diez años trabajando con datos y hoy soy analista de datos sénior en una plataforma europea con millones de usuarios. He visto de cerca lo que separa un proyecto que acaba en producción de una demo bonita que nadie usa. Monté Algoryme porque demasiadas empresas compran cajas negras que no controlan ni entienden: aquí construimos sobre tu infraestructura, te explicamos cada decisión y te dejamos el sistema en la mano.</p>
+        <a class="li-link" href="https://www.linkedin.com/in/rogelioalcaraz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+      </div>
+    </div>
     <ul class="team">
-      <li>
-        <img src="equipo/rogelio-alcaraz.jpg" width="160" height="160" loading="lazy" decoding="async" alt="Rogelio Alcaraz">
-        <p class="n">Rogelio Alcaraz</p><p class="r">Director</p>
-      </li>
       <li>
         <img src="equipo/andrew-schwartz.jpg" width="160" height="160" loading="lazy" decoding="async" alt="Andrew Schwartz">
         <p class="n">Andrew Schwartz</p><p class="r">Project Manager</p>
+        <a class="li" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Andrew Schwartz"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
       </li>
       <li>
         <img src="equipo/luis-paloma.jpg" width="160" height="160" loading="lazy" decoding="async" alt="Luis Paloma">
         <p class="n">Luis Paloma</p><p class="r">AI Specialist</p>
+        <a class="li" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Luis Paloma"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
       </li>
       <li>
         <img src="equipo/massimo-angelini.jpg" width="160" height="160" loading="lazy" decoding="async" alt="Massimo Angelini">
         <p class="n">Massimo Angelini</p><p class="r">AI Specialist</p>
+        <a class="li" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Massimo Angelini"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
       </li>
       <li>
         <img src="equipo/paula-camprecios.jpg" width="160" height="160" loading="lazy" decoding="async" alt="Paula Campreciós">
         <p class="n">Paula Campreciós</p><p class="r">AI Specialist</p>
+        <a class="li" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Paula Campreciós"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
       </li>
       <li>
         <img src="equipo/alvaro-entrena.jpg" width="160" height="160" loading="lazy" decoding="async" alt="Álvaro Entrena">
         <p class="n">Álvaro Entrena</p><p class="r">Trainee</p>
+        <a class="li" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Álvaro Entrena"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
       </li>
     </ul>
   </div>

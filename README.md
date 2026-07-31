@@ -33,3 +33,14 @@ llega como `Web v2 · <servicio> · <nombre>`. Así se sabe por qué servicio en
 
 - Solo en español (el prototipo no lleva el motor de idiomas de la web principal).
 - `noindex` en todas las páginas: es un prototipo, no debe competir en Google con algoryme.com.
+
+## Casos de éxito
+
+- **Home**: sección «Casos» con preview real de las tres webs (`casos/*.jpg`, capturas
+  descargadas una vez, no se piden en caliente a ningún servicio).
+- **Landings**: llevan un caso real quien lo tiene — informes (fondo de inversión),
+  automatización (productora de vitaminas) y dashboards (análisis de renta variable).
+  Auditoría, atención al cliente y chatbots **aún no tienen caso**: no se inventa ninguno.
+
+⚠️ En un `<img>`, los atributos `width`/`height` actúan como CSS y **anulan `aspect-ratio`**.
+Sin `height:auto`, los previews se estiraban a 349×600 y `object-fit:cover` los ampliaba.
